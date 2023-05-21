@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-    <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon">
     <!-- Bootstrap CSS (CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <!-- Bootstrap icons -->
@@ -40,8 +40,8 @@
                 <img src="logo.png" alt="Logo" height="55px" class="me-2">
                 <h1 class="h4 m-0">Pinger</h1>
                 <nav class="ms-auto">
-                    <a href="#" class="btn btn-outline-primary me-2">About Me</a>
-                    <a href="#" class="btn btn-outline-dark">View Code on GitHUb</a>
+                    <a href="https://github.com/SubhanRaj/" target="_blank" class="btn btn-outline-primary me-2">About Me</a>
+                    <a href="https://github.com/SubhanRaj/PHPPinger" target="_blank" class="btn btn-outline-dark">View Code on GitHUb</a>
                 </nav>
             </div>
 
