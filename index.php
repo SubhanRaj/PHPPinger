@@ -52,13 +52,21 @@
                     </form>
                     <div class="text-center">
                         <div id="pingButtons" class="mb-3">
-                            <button type="button" class="btn btn-success btn-lg " id="startButton">Start</button>
-                            <button type="button" class="btn btn-danger btn-lg" id="stopButton" onclick="stopPing()" disabled>Stop</button>
+                            <button type="button" class="btn btn-success btn-lg" id="startButton">Start</button>
+                            <!-- <button type="button" class="btn btn-danger btn-lg" id="stopButton" onclick="stopPing()" disabled>Stop</button> -->
                         </div>
                     </div>
-                    <div id="outputContainer" class="mt-3"></div>
+                    <div id="outputContainer" class="mt-3">
+
+                        <div id="loadingIcon" class="d-flex justify-content-center align-items-center">
+                            <!-- The loading icon will be dynamically added or removed by the AJAX code -->
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
+
 
         </div>
     </main>
@@ -77,7 +85,6 @@
     </script>
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- AJAX -->
     <script>
         $(document).ready(function() {
             // Handle Start button click
@@ -94,6 +101,9 @@
                     $("#inputAddress").next(".clear-btn").remove();
                     $("#inputAddress").after('<button class="clear-btn" onclick="clearInput()"><i class="bi bi-x"></i></button>');
 
+                    // Remove loading icon
+                    $("#loadingIcon").empty();
+
                     return;
                 }
 
@@ -102,23 +112,36 @@
                 $("#inputAddress").removeClass("invalid");
                 $("#inputAddress").next(".clear-btn").remove();
 
+                // Display loading icon
+                $("#loadingIcon").html('<div class="loading-icon"><img src="loader.gif" height="180px" width="180px" alt="Loading..."></div>');
+
                 // Send an AJAX request to the server for pinging
                 $.ajax({
-                    url: "ping-handler.php", // Replace with the actual path to your PHP file
+                    url: "ping-handler.php", // Replace with the correct path to ping-handler.php
                     method: "POST",
                     data: {
                         address: address
                     },
+                    beforeSend: function() {
+                        // Show the loading icon
+                        $("#loadingIcon").find(".loading-icon").show();
+                    },
                     success: function(response) {
-                        // Display the ping result
-                        $("#outputContainer").append("<p>" + response + "</p>");
-
-                        // Scroll to bottom
-                        $("#outputContainer").scrollTop($("#outputContainer")[0].scrollHeight);
+                        if (response.error) {
+                            // Display error message
+                            $("#outputContainer").html('<div class="alert alert-danger" role="alert">' + response.error + '</div>');
+                        } else {
+                            // Display ping result
+                            $("#outputContainer").html('<div class="alert alert-success" role="alert">' + response.result + '</div>');
+                        }
                     },
                     error: function() {
                         // Display an error message
-                        $("#outputContainer").text("Error occurred while pinging.");
+                        $("#outputContainer").html('<div class="alert alert-danger" role="alert">Error occurred while pinging.</div>');
+                    },
+                    complete: function() {
+                        // Remove loading icon after request is complete
+                        $("#outputContainer").find(".loading-icon").remove();
                     }
                 });
             });
@@ -129,6 +152,7 @@
                 $("#inputAddress").removeClass("invalid");
                 $("#inputAddress").next(".clear-btn").remove();
                 $("#errorMessage").text("");
+                $("#outputContainer").empty();
             }
 
             // Input validation function
@@ -141,6 +165,10 @@
             }
         });
     </script>
+
+
+
+
 
 
 
