@@ -23,17 +23,21 @@
 
 <body>
     <!-- Header -->
+
     <header class="bg-light py-3">
         <div class="container">
             <div class="d-flex align-items-center">
+                <img src="logo.png" alt="Logo" height="55px" class="me-2">
                 <h1 class="h4 m-0">Pinger</h1>
                 <nav class="ms-auto">
                     <a href="#" class="btn btn-outline-primary me-2">About Me</a>
-                    <a href="#" class="btn btn-outline-secondary">GitHub Repo</a>
+                    <a href="#" class="btn btn-outline-dark">View Code on GitHUb</a>
                 </nav>
             </div>
+
         </div>
     </header>
+
 
     <!-- Main Content -->
     <main class="py-5">
@@ -58,13 +62,11 @@
                     </div>
                     <div id="outputContainer" class="mt-3">
 
-                        <div id="loadingIcon" class="d-flex justify-content-center align-items-center">
-                            <!-- The loading icon will be dynamically added or removed by the AJAX code -->
-                        </div>
                     </div>
 
                 </div>
             </div>
+
 
 
 
@@ -113,7 +115,7 @@
                 $("#inputAddress").next(".clear-btn").remove();
 
                 // Display loading icon
-                $("#loadingIcon").html('<div class="loading-icon"><img src="loader.gif" height="180px" width="180px" alt="Loading..."></div>');
+                $("#outputContainer").html('<div id="loadingIcon" class="d-flex justify-content-center align-items-center"><div class="loading-icon"><img src="loader.gif" height="180px" width="180px" alt="Loading..."></div></div>');
 
                 // Send an AJAX request to the server for pinging
                 $.ajax({
@@ -124,20 +126,20 @@
                     },
                     beforeSend: function() {
                         // Show the loading icon
-                        $("#loadingIcon").find(".loading-icon").show();
+                        $("#outputContainer").find(".loading-icon").show();
                     },
                     success: function(response) {
                         if (response.error) {
                             // Display error message
-                            $("#outputContainer").html('<div class="alert alert-danger" role="alert">' + response.error + '</div>');
+                            $("#outputContainer").html('<div class="alert alert-danger alert-dismissible fade show" role="alert">' + response.error + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>');
                         } else {
                             // Display ping result
-                            $("#outputContainer").html('<div class="alert alert-success" role="alert">' + response.result + '</div>');
+                            $("#outputContainer").html('<div class="alert alert-success alert-dismissible fade show" role="alert">' + response.result + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>');
                         }
                     },
                     error: function() {
                         // Display an error message
-                        $("#outputContainer").html('<div class="alert alert-danger" role="alert">Error occurred while pinging.</div>');
+                        $("#outputContainer").html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Error occurred while pinging.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>');
                     },
                     complete: function() {
                         // Remove loading icon after request is complete
