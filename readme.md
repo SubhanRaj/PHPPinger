@@ -84,9 +84,10 @@ Pinger is a web application that allows you to quickly check the connectivity an
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Pinger Screenshot][product-screenshot]](https://pinger.masterofcosmos.com)
 
-Pinger is a web application that allows you to quickly check the connectivity and response time of a website or IP address. It provides a simple and user-friendly interface to perform ping tests and obtain real-time results.`
+Pinger is a web application that allows you to quickly check the connectivity and response time of a website or IP address. It provides a simple and user-friendly interface to perform ping tests and obtain real-time results.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -97,6 +98,8 @@ Pinger is a web application that allows you to quickly check the connectivity an
 * [![PHP][PHP]][PHP-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
+
+* Pinger is built using HTML, CSS, JavaScript, and jQuery for the frontend, and PHP for the backend. AJAX is used for asynchronous communication between the client and server, ensuring a seamless user experience.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,26 +114,19 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* XAMPP
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo in your `htdocs` folder
    ```sh
    git clone https://github.com/SubhanRaj/Pinger.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+2. Start Apache  in XAMPP
+   
+3. Goto `localhost/Pinger` in your browser
+
+4. Keep Pinging!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -139,9 +135,19 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. **Network Troubleshooting:** Use Pinger to quickly check the connectivity and response time of websites or IP addresses. It can help identify network issues, such as slow or unresponsive connections, and provide valuable insights for troubleshooting.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+2. **Website Monitoring:** Monitor the availability and responsiveness of your own websites or critical online services. Set up regular pings to ensure they are up and running smoothly, and receive instant notifications if any issues arise.
+
+3. **Server Monitoring:** Ping servers within your network to ensure their availability and responsiveness. This can be useful for system administrators or DevOps teams to monitor the health and performance of their servers.
+
+4. **DNS Configuration Testing:** Verify the DNS configuration of a website by pinging its IP address. This can help diagnose DNS-related issues, such as incorrect or misconfigured DNS settings.
+
+5. **Performance Testing:** Measure the response time of different websites or IP addresses to compare their performance. This can be helpful when choosing hosting providers or assessing the overall speed and reliability of different online services.
+
+6. **Educational Purposes:** Learn about network connectivity and how ping works by using Pinger as an educational tool. Understand the concept of round-trip time (RTT) and observe how different factors can affect network latency.
+
+_For more examples, please refer to the [Documentation](https://pinger.masterofcosmos.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,10 +156,15 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [x] Enter a website URL or IP address to check its connectivity
+- [x] Validates user input for proper formatting
+- [x] Performs ping tests and displays the response time
+    - [x] Provides instant feedback on whether the website or IP address is reachable
+    - [x] Provides instant feedback on whether the website or IP address is reachable
+- [ ] Displays a history of ping tests
+- [ ] Able to use `Enter` key to submit the form
+- [ ] Add more network tools
+- [ ] Add Dark Mode
 
 See the [open issues](https://github.com/SubhanRaj/Pinger/issues) for a full list of proposed features (and known issues).
 
@@ -224,7 +235,7 @@ Project Link: [https://github.com/SubhanRaj/Pinger](https://github.com/SubhanRaj
 [license-url]: https://github.com/SubhanRaj/Pinger/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/in/subhanraj2002/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: screenshot.png
 [PHP]: https://img.shields.io/badge/php-AEB2D5?style=for-the-badge&logo=php&logoColor=black
 [PHP-url]: https://php.net/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
