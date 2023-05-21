@@ -18,6 +18,11 @@
             transform: translateY(-50%);
             cursor: pointer;
         }
+
+        a {
+            text-decoration: none;
+
+        }
     </style>
 </head>
 
@@ -78,7 +83,8 @@
     <!-- Footer -->
     <footer class="text-center py-3">
         <div class="container">
-            <p class="m-0">Pinger &copy; 2023</p>
+            <p class="m-0">Pinger | A Easy way to Ping Websites</p>
+            <p>Made by <a href="https://github.com/subhanraj" target="_blank">Subhan Raj</a></p>
         </div>
     </footer>
 
