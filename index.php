@@ -67,7 +67,6 @@
                     <div class="text-center">
                         <div id="pingButtons" class="mb-3">
                             <button type="button" class="btn btn-success btn-lg" id="startButton">Start</button>
-                            <!-- <button type="button" class="btn btn-danger btn-lg" id="stopButton" onclick="stopPing()" disabled>Stop</button> -->
                         </div>
                     </div>
                     <div id="outputContainer" class="mt-3">
