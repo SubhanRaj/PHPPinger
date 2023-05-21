@@ -37,7 +37,8 @@
 <h3 align="center">Pinger</h3>
 
   <p align="center">
-    project_description
+    
+Pinger is a web application that allows you to quickly check the connectivity and response time of a website or IP address. It provides a simple and user-friendly interface to perform ping tests and obtain real-time results.
     <br />
     <a href="https://github.com/SubhanRaj/Pinger"><strong>Explore the docs »</strong></a>
     <br />
@@ -85,7 +86,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `SubhanRaj`, `Pinger`, `SubhanRaj2002`, `in/subhanraj2002/`, `email_client`, `email`, `Pinger`, `project_description`
+Pinger is a web application that allows you to quickly check the connectivity and response time of a website or IP address. It provides a simple and user-friendly interface to perform ping tests and obtain real-time results.`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -195,7 +196,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@SubhanRaj2002](https://twitter.com/SubhanRaj2002) - email@email_client.com
+Your Name - [@SubhanRaj2002](https://twitter.com/SubhanRaj2002) - shubhanraj2002@gmail.com@gmail.com.com
 
 Project Link: [https://github.com/SubhanRaj/Pinger](https://github.com/SubhanRaj/Pinger)
 
