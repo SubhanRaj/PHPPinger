@@ -13,7 +13,7 @@
     <!-- Bootstrap CSS (CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <!-- Bootstrap icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css">
     <!-- styling -->
     <style>
         .clear-btn {
@@ -40,8 +40,7 @@
                 <img src="logo.png" alt="Logo" height="55px" class="me-2">
                 <h1 class="h4 m-0">Pinger</h1>
                 <nav class="ms-auto">
-                    <a href="https://github.com/SubhanRaj/" target="_blank" class="btn btn-outline-primary me-2">About Me</a>
-                    <a href="https://github.com/SubhanRaj/PHPPinger" target="_blank" class="btn btn-outline-dark">View Code on GitHUb</a>
+                    <a href="https://github.com/SubhanRaj/PHPPinger" target="_blank" class="btn btn-outline-dark">View on GitHub</a>
                 </nav>
             </div>
 
