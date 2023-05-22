@@ -10,6 +10,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
     <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Pinger">
+    <meta property="og:description" content="Ping any website or IP address to check its availability.">
+    <meta property="og:image" content="https://pinger.masterofcosmos.com/logo.png">
+    <meta property="og:url" content="https://pinger.masterofcosmos.com/">
+    <meta property="og:type" content="website">
     <!-- Bootstrap CSS (CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <!-- Bootstrap icons -->
